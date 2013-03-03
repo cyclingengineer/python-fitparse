@@ -277,9 +277,13 @@ def autogen_python(types, fields):
 
     for msg_num, message in sorted(types['mesg_num'].values.iteritems()):
         msg_name = message.name
-
+        
+        # check for message types that aren't defined
+        if msg_name not in fields:
+            continue
+        
         writeln("MessageType(%s, %s, {" % (msg_num, repr(msg_name)))
-
+        
         msg_fields = fields[msg_name]
         for f_num, field in sorted(msg_fields.iteritems()):
             write("    %s: " % f_num)
