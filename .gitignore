@@ -1,1 +1,7 @@
 *.pyc
+misc/FIT-SDK-1.4/
+scripts/LapSwim.FIT
+scripts/LapSwim1.FIT
+scripts/Profile.xls
+scripts/lap_swim_example.txt
+
